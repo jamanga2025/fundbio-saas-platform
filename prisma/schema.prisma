@@ -1,0 +1,268 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+// Enum for user roles
+enum UserRole {
+  FUNDACION
+  AYUNTAMIENTO
+}
+
+// Enums según schemafb.json
+enum EscalaType {
+  MUNICIPAL
+  PROYECTO
+  SUBMUNICIPAL
+  AUTONOMICO
+  PROVINCIAL
+  ESTATAL
+  EUROPEO
+  SUPRAMUNICIPAL
+  DISTRITO
+  BARRIO
+  VECINAL
+  REGIONAL
+  SECTORIAL
+  SOCIAL
+  AMBIENTAL
+  INFRAESTRUCTURA
+  INSTITUCIONAL
+  ECONOMICO
+  LOGISTICO
+  OTRO
+}
+
+enum UnidadType {
+  M2
+  NUMERO
+  PORCENTAJE
+  NUMERO_Y_PORCENTAJE
+  EURO
+  HECTAREA
+  KILOMETROS
+  ANOS
+  MESES
+  DIAS
+  SI_NO
+  PUNTUACION
+  INDICE
+  OTRO
+}
+
+enum CategoriaPrefijo {
+  SUP
+  C
+  BDU
+  CBA
+  CBS
+  CON
+  RES
+  GEN
+  A
+  SEG
+}
+
+// Necessary for Next auth
+model Account {
+    id                String  @id @default(cuid())
+    userId            String
+    type              String
+    provider          String
+    providerAccountId String
+    refresh_token     String? @db.Text
+    access_token      String? @db.Text
+    expires_at        Int?
+    token_type        String?
+    scope             String?
+    id_token          String? @db.Text
+    session_state     String?
+    user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@unique([provider, providerAccountId])
+}
+
+model Session {
+    id           String   @id @default(cuid())
+    sessionToken String   @unique
+    userId       String
+    expires      DateTime
+    user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+    id            String    @id @default(cuid())
+    name          String?
+    email         String?   @unique
+    emailVerified DateTime?
+    image         String?
+    accounts      Account[]
+    sessions      Session[]
+
+    // New fields for the application
+    role          UserRole  @default(AYUNTAMIENTO)
+    proyectoId    String?
+    proyecto      Proyecto? @relation(fields: [proyectoId], references: [id])
+}
+
+model VerificationToken {
+    identifier String
+    token      String   @unique
+    expires    DateTime
+
+    @@unique([identifier, token])
+}
+
+// --- Application Specific Models according to schemafb.json ---
+
+// Modelo principal: Proyecto
+model Proyecto {
+    id                  String   @id @default(cuid())
+    entidad             String   @db.VarChar(255)
+    nif                 String?  @db.VarChar(9)
+    nombre              String   @db.VarChar(500)
+    comunidad_autonoma  String?  @db.VarChar(100)
+    provincia           String?  @db.VarChar(100)
+    municipio           String?  @db.VarChar(100)
+    fecha_inicio        DateTime?
+    fecha_finalizacion  DateTime?
+    codigo_proyecto     String?  @db.VarChar(50)
+    presupuesto_total   Float?
+    importe_ayuda       Float?
+    coordinador         String?  @db.VarChar(255)
+    descripcion         String?  @db.Text
+    
+    // Relaciones
+    users                   User[]
+    indicadores_generales   IndicadorGeneral[]
+    indicadores_estrategicos IndicadorEstrategico[]
+    indicadores_seguimiento IndicadorSeguimiento[]
+    
+    createdAt           DateTime @default(now())
+    updatedAt           DateTime @updatedAt
+}
+
+// Indicadores Generales (SUP, C, BDU, CBA, CBS, CON, RES, GEN)
+model IndicadorGeneral {
+    id                String                   @id @default(cuid())
+    codigo            String                   @unique
+    categoria_prefijo CategoriaPrefijo
+    indicador         String                   @db.Text
+    escala            EscalaType?
+    unidad            UnidadType?
+    origen_calculo    String?                  @db.Text
+    objetivos_2025    String?                  @db.Text
+    observaciones     String?                  @db.Text
+    
+    // Relación con proyecto
+    proyecto_id       String?
+    proyecto          Proyecto?                @relation(fields: [proyecto_id], references: [id])
+    
+    // Relación con valores
+    valores           ValorIndicadorGeneral[]
+    
+    createdAt         DateTime                 @default(now())
+    updatedAt         DateTime                 @updatedAt
+}
+
+// Indicadores Estratégicos (A-XXX)
+model IndicadorEstrategico {
+    id                String                       @id @default(cuid())
+    codigo            String                       @unique
+    indicador         String                       @db.Text
+    escala            EscalaType?
+    unidad            UnidadType?
+    origen_calculo    String?                      @db.Text
+    objetivos_2025    String?                      @db.Text
+    observaciones     String?                      @db.Text
+    
+    // Relación con proyecto
+    proyecto_id       String?
+    proyecto          Proyecto?                    @relation(fields: [proyecto_id], references: [id])
+    
+    // Relación con valores
+    valores           ValorIndicadorEstrategico[]
+    
+    createdAt         DateTime                     @default(now())
+    updatedAt         DateTime                     @updatedAt
+}
+
+// Indicadores de Seguimiento (SEG-XXX)
+model IndicadorSeguimiento {
+    id                String            @id @default(cuid())
+    codigo            String            @unique
+    indicador         String            @db.Text
+    escala            EscalaType?
+    unidad            UnidadType?
+    origen_calculo    String?           @db.Text
+    objetivos_2025    String?           @db.Text
+    observaciones     String?           @db.Text
+    
+    // Relación con proyecto
+    proyecto_id       String?
+    proyecto          Proyecto?         @relation(fields: [proyecto_id], references: [id])
+    
+    // Relación con valores
+    valores           ValorSeguimiento[]
+    
+    createdAt         DateTime          @default(now())
+    updatedAt         DateTime          @updatedAt
+}
+
+// Valores para Indicadores Generales
+model ValorIndicadorGeneral {
+    id                      String           @id @default(cuid())
+    valor_linea_base        Float?
+    valor_intermedio        Float?
+    valor_final             Float?
+    fecha_medicion          DateTime?
+    observaciones           String?          @db.Text
+    
+    // Relación con indicador
+    indicador_general_id    String
+    indicador_general       IndicadorGeneral @relation(fields: [indicador_general_id], references: [id], onDelete: Cascade)
+    
+    createdAt               DateTime         @default(now())
+    updatedAt               DateTime         @updatedAt
+}
+
+// Valores para Indicadores Estratégicos
+model ValorIndicadorEstrategico {
+    id                        String              @id @default(cuid())
+    valor_si_no               Boolean?
+    valor_numerico            Float?
+    valor_texto               String?             @db.Text
+    fecha_medicion            DateTime?
+    observaciones             String?             @db.Text
+    
+    // Relación con indicador
+    indicador_estrategico_id  String
+    indicador_estrategico     IndicadorEstrategico @relation(fields: [indicador_estrategico_id], references: [id], onDelete: Cascade)
+    
+    createdAt                 DateTime            @default(now())
+    updatedAt                 DateTime            @updatedAt
+}
+
+// Valores para Indicadores de Seguimiento
+model ValorSeguimiento {
+    id                        String              @id @default(cuid())
+    valor_numerico            Float?
+    valor_texto               String?             @db.Text
+    fecha_medicion            DateTime
+    periodo_seguimiento       String?             @db.VarChar(100)
+    observaciones             String?             @db.Text
+    
+    // Relación con indicador
+    indicador_seguimiento_id  String
+    indicador_seguimiento     IndicadorSeguimiento @relation(fields: [indicador_seguimiento_id], references: [id], onDelete: Cascade)
+    
+    createdAt                 DateTime            @default(now())
+    updatedAt                 DateTime            @updatedAt
+}

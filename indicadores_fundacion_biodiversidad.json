@@ -1,0 +1,1191 @@
+{
+  "metadata": {
+    "archivo": "PINTO_Herramienta_jamg(1).xlsx",
+    "descripcion": "Herramienta de seguimiento de indicadores para proyectos de renaturalización urbana - Fundación Biodiversidad",
+    "ciudad": "Pinto",
+    "total_hojas": 5
+  },
+  "datos_identificativos": {
+    "campos_requeridos": [
+      "Entidad",
+      "NIF",
+      "Proyecto",
+      "Comunidad autónoma",
+      "Provincia",
+      "Municipio/s",
+      "Fecha finalización proyecto",
+      "Fecha inicio proyecto",
+      "Código de proyecto",
+      "Presupuesto total",
+      "Importe de la ayuda otorgada",
+      "Miembros de la agrupación (si procede)",
+      "Fecha finalización propuesta",
+      "Coordinador/a del proyecto",
+      "Nº informe de seguimiento",
+      "Breve descripción del proyecto",
+      "Fecha de reporte de indicadores"
+    ],
+    "descripcion": "Información básica del proyecto y entidad beneficiaria"
+  },
+  "indicadores_generales": {
+    "total": 128,
+    "indicadores": [
+      {
+        "codigo": "SUP-001",
+        "nombre": "Superficie de nuevos espacios urbanos naturalizados",
+        "escala": "Proyectos (B1, B2 y B3)",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "SUP-002",
+        "nombre": "Superficie peatonalizada",
+        "escala": "Proyecto (B2)",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "SUP-003",
+        "nombre": "Superficie de áreas verdes recualificadas",
+        "escala": "Proyectos (B1 y B3)",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "SUP-004",
+        "nombre": "Superficie no urbana naturalizada",
+        "escala": "Proyecto",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "SUP-005",
+        "nombre": "Superficie renaturalizada",
+        "escala": "Proyectos (B2 y B4)",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "SUP-006",
+        "nombre": "Superficie renaturalizada de gestión pública",
+        "escala": "Proyecto",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "SUP-007",
+        "nombre": "Superficie renaturalizada de gestión privada",
+        "escala": "Proyecto (B3)",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "SUP-008",
+        "nombre": "Superficie de áreas verdes",
+        "escala": "Municipal",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "SUP-009",
+        "nombre": "Superficie de áreas verdes públicas",
+        "escala": "Municipal",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "SUP-010",
+        "nombre": "Superficie municipal de áreas naturales",
+        "escala": "Municipal",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "SUP-011",
+        "nombre": "Cubiertas verdes ",
+        "escala": "Proyecto",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "SUP-012",
+        "nombre": "Superficie de cubiertas verdes en edificios públicos",
+        "escala": "Proyecto",
+        "unidad": "m2 y % sobre total disponible",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "SUP-013",
+        "nombre": "Superficie urbana permeable",
+        "escala": "Proyecto (B2)",
+        "unidad": "%",
+        "origen_calculo": "",
+        "categoria": "SUP"
+      },
+      {
+        "codigo": "BDU-001",
+        "nombre": "Control sobre especies exóticas invasoras (EEI) de fauna y flora\n",
+        "escala": "Municipal",
+        "unidad": "Valor 1 a 5",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-002",
+        "nombre": "Presupuesto anual per cápita dedicado a la gestión de la biodiversidad municipal\n",
+        "escala": "Municipal",
+        "unidad": "%",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-003",
+        "nombre": "Nº de hábitats de interés del municipio con plan de gestión adecuado",
+        "escala": "Municipal",
+        "unidad": "Nº y %",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-004",
+        "nombre": "Nº de especies amenazadas del municipio con plan de conservación",
+        "escala": "Municipal",
+        "unidad": "Nº y %",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-005",
+        "nombre": "Aplicación de gestión integrada de plagas ",
+        "escala": "Municipal",
+        "unidad": "m2 y %",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-006",
+        "nombre": "Diversidad de especies de fauna en espacios renaturalizados",
+        "escala": "Proyecto (B1, B2, B3 y B4)",
+        "unidad": "%",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-007",
+        "nombre": "Diversidad de especies de fauna en espacios naturalizados",
+        "escala": "Proyecto",
+        "unidad": "Nº ",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-008",
+        "nombre": "Riqueza de especies de grupos de fauna específicos (aves/mariposas/ herpetos/murciélagos)",
+        "escala": "Proyecto (B1 y B3)",
+        "unidad": "Nº ",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-009",
+        "nombre": "Poblaciones de aves comunes",
+        "escala": "Proyecto (B1 y B3)",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-010",
+        "nombre": "Cría o nidificación de una especie indicadora",
+        "escala": "Proyecto",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-011",
+        "nombre": "Cantidad de árboles y arbustos plantados ",
+        "escala": "Proyecto (B1 y B4)",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-012",
+        "nombre": "Diversidad vegetal en plantaciones ",
+        "escala": "Municipal",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-013",
+        "nombre": "Coherencia ecológica de las especies vegetales plantadas",
+        "escala": "Municipal",
+        "unidad": "%",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-014",
+        "nombre": "Conocimiento de la flora vascular municipal",
+        "escala": "Municipal",
+        "unidad": "Si/No",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-015",
+        "nombre": "Biodiversidad equilibrada de arbolado urbano",
+        "escala": "Proyecto",
+        "unidad": "%",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-016",
+        "nombre": "Superficie agrícola renaturalizada ",
+        "escala": "Proyecto",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-017",
+        "nombre": "Superficie de pradera natural creada",
+        "escala": "Proyecto",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-018",
+        "nombre": "Láminas de agua naturalizadas creadas o restauradas",
+        "escala": "Proyecto",
+        "unidad": "Nº y m2",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-019",
+        "nombre": "Refugios de fauna instalados y tasa de utilización",
+        "escala": "Proyecto",
+        "unidad": "Nº y %",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-020",
+        "nombre": "Pasos de fauna  y tasa de utilización",
+        "escala": "Proyecto",
+        "unidad": "Nº y %",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "BDU-021",
+        "nombre": "Índice nacional de diatomeas (iDIAT-ES)",
+        "escala": "Proyecto",
+        "unidad": "0 a 5",
+        "origen_calculo": "",
+        "categoria": "BDU"
+      },
+      {
+        "codigo": "CON-001",
+        "nombre": "Número de espacios verdes con funciones ecológicas (nodos o núcleos) conectados",
+        "escala": "Proyecto (B2)",
+        "unidad": "Número",
+        "origen_calculo": "",
+        "categoria": "CON"
+      },
+      {
+        "codigo": "CON-002",
+        "nombre": "Longitud de corredores ecológicos**",
+        "escala": "Proyecto (B2)",
+        "unidad": "ml",
+        "origen_calculo": "",
+        "categoria": "CON"
+      },
+      {
+        "codigo": "CON-003",
+        "nombre": "Superficie de hábitat desfragmentado",
+        "escala": "Proyecto",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "CON"
+      },
+      {
+        "codigo": "CON-004",
+        "nombre": "Tamaño de malla efectiva (TME)",
+        "escala": "Municipal",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "CON"
+      },
+      {
+        "codigo": "CON-005",
+        "nombre": "Cobertura de arbolado",
+        "escala": "Proyecto (B2)",
+        "unidad": "%",
+        "origen_calculo": "",
+        "categoria": "CON"
+      },
+      {
+        "codigo": "CON-006",
+        "nombre": "Naturalidad de la formación arbórea",
+        "escala": "Proyecto",
+        "unidad": "Valor 1-10",
+        "origen_calculo": "",
+        "categoria": "CON"
+      },
+      {
+        "codigo": "CON-007",
+        "nombre": "Densidad y vigorosidad del verde urbano (NDVI)",
+        "escala": "Municipal",
+        "unidad": "m2 y % por rango respecto a la Superficie municipal de áreas verdes",
+        "origen_calculo": "",
+        "categoria": "CON"
+      },
+      {
+        "codigo": "CON-008",
+        "nombre": "Índice de funcionalidad de los espacios verdes urbanos (IF)",
+        "escala": "Proyecto",
+        "unidad": "/",
+        "origen_calculo": "",
+        "categoria": "CON"
+      },
+      {
+        "codigo": "CON-009",
+        "nombre": "Superficie de hábitat para una especie indicadora concreta \"X\" ",
+        "escala": "Proyecto",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "CON"
+      },
+      {
+        "codigo": "CON-010",
+        "nombre": "Superficie de hábitat para un taxón indicador concreto \"Lepidópteros diurnos\"",
+        "escala": "Proyecto (B1)",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "CON"
+      },
+      {
+        "codigo": "RES-001",
+        "nombre": "Especies adaptadas al clima futuro",
+        "escala": "Proyecto",
+        "unidad": "%",
+        "origen_calculo": "",
+        "categoria": "RES"
+      },
+      {
+        "codigo": "RES-002",
+        "nombre": "Población protegida frente al riesgo de inundación",
+        "escala": "Proyecto",
+        "unidad": "Número",
+        "origen_calculo": "",
+        "categoria": "RES"
+      },
+      {
+        "codigo": "RES-003",
+        "nombre": "Volumen de agua de lluvia interceptada",
+        "escala": "Proyecto",
+        "unidad": "m3",
+        "origen_calculo": "",
+        "categoria": "RES"
+      },
+      {
+        "codigo": "RES-004",
+        "nombre": "Volumen de agua de lluvia interceptada redirigida a suelo fértil",
+        "escala": "Proyecto",
+        "unidad": "%",
+        "origen_calculo": "",
+        "categoria": "RES"
+      },
+      {
+        "codigo": "RES-005",
+        "nombre": "Volumen anual de agua empleada en riego municipal",
+        "escala": "Municipal\nlos datos son para B2",
+        "unidad": "m3 por m2 área verde",
+        "origen_calculo": "",
+        "categoria": "RES"
+      },
+      {
+        "codigo": "RES-006",
+        "nombre": "Volumen anual de agua reutilizada en riego de municipal",
+        "escala": "Municipal\nlos datos son para B2",
+        "unidad": "m3 por m2 área verde",
+        "origen_calculo": "",
+        "categoria": "RES"
+      },
+      {
+        "codigo": "RES-007",
+        "nombre": "Superficie con estado erosión grave o muy grave",
+        "escala": "Proyecto",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "RES"
+      },
+      {
+        "codigo": "RES-008",
+        "nombre": "Superficie anual afectada por incendios",
+        "escala": "Proyecto",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "RES"
+      },
+      {
+        "codigo": "RES-009",
+        "nombre": "Daños materiales anuales generados por fenómenos meteorológicos extremos ",
+        "escala": "Municipal",
+        "unidad": "€",
+        "origen_calculo": "",
+        "categoria": "RES"
+      },
+      {
+        "codigo": "RES-010",
+        "nombre": "Ingresos anuales hospitalarios por efectos de calor",
+        "escala": "Municipal",
+        "unidad": "Número ",
+        "origen_calculo": "",
+        "categoria": "RES"
+      },
+      {
+        "codigo": "RES-011",
+        "nombre": "Presencia o establecimiento del mosquito Aedes albopictus",
+        "escala": "Municipal",
+        "unidad": "Reporte de presencia (Si/No) / Casos de transmisión de enfermedad (Número)",
+        "origen_calculo": "",
+        "categoria": "RES"
+      },
+      {
+        "codigo": "RES-012",
+        "nombre": "Concentración atmosférica de polen potencialmente alergénico",
+        "escala": "Municipal",
+        "unidad": "granos de polen / m3 de aire",
+        "origen_calculo": "",
+        "categoria": "RES"
+      },
+      {
+        "codigo": "CBA-001",
+        "nombre": "Concentración de material particulado inferior a 2.5 micras (PM 2,5)",
+        "escala": "Proyecto",
+        "unidad": "µg/m3",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-002",
+        "nombre": "Concentración de óxidos de nitrógeno (NO2 y NO)",
+        "escala": "Proyecto",
+        "unidad": "µg/m3",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-003",
+        "nombre": "Índice de Sensación térmica por calor",
+        "escala": "Proyecto  (B2 y B4)",
+        "unidad": "Adimensional",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-004",
+        "nombre": "Nivel de presión sonora ambiental diurno",
+        "escala": "Proyecto  (B2 y B4)",
+        "unidad": "dBA",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-005",
+        "nombre": "Oxígeno disuelto",
+        "escala": "Proyecto",
+        "unidad": "mg/l y tasa de saturación en %",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-006",
+        "nombre": "Carbono secuestrado",
+        "escala": "Proyecto (B2)",
+        "unidad": "Ton CO2 /año",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-007",
+        "nombre": "Uso de materiales reciclados o reutilizados",
+        "escala": "Proyecto (B2)",
+        "unidad": "% en volumen y % del presupuesto de ejecución",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-008",
+        "nombre": "Uso de materiales locales",
+        "escala": "Proyecto",
+        "unidad": "% del presupuesto de ejecución",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-009",
+        "nombre": "Uso de materiales de bajo impacto",
+        "escala": "Proyecto (B2)",
+        "unidad": "% del presupuesto de ejecución",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-010",
+        "nombre": "Residuos de construcción y demolición gestionados",
+        "escala": "Proyecto (B2)",
+        "unidad": "% en peso",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-011",
+        "nombre": "Uso de compost",
+        "escala": "Proyecto",
+        "unidad": "m3 y % ",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-001",
+        "nombre": "Concentración de material particulado inferior a 2.5 micras (PM 2,5)",
+        "escala": "Proyecto",
+        "unidad": "µg/m3",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-002",
+        "nombre": "Concentración de óxidos de nitrógeno (NO2 y NO)",
+        "escala": "Proyecto",
+        "unidad": "µg/m3",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-003",
+        "nombre": "Índice de Sensación térmica por calor",
+        "escala": "Proyecto  (B2 y B4)",
+        "unidad": "Adimensional",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-004",
+        "nombre": "Nivel de presión sonora ambiental diurno",
+        "escala": "Proyecto  (B2 y B4)",
+        "unidad": "dBA",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-005",
+        "nombre": "Oxígeno disuelto",
+        "escala": "Proyecto",
+        "unidad": "mg/l y tasa de saturación en %",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-006",
+        "nombre": "Carbono secuestrado",
+        "escala": "Proyecto (B2)",
+        "unidad": "Ton CO2 /año",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-007",
+        "nombre": "Uso de materiales reciclados o reutilizados",
+        "escala": "Proyecto (B2)",
+        "unidad": "% en volumen y % del presupuesto de ejecución",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-008",
+        "nombre": "Uso de materiales locales",
+        "escala": "Proyecto",
+        "unidad": "% del presupuesto de ejecución",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-009",
+        "nombre": "Uso de materiales de bajo impacto",
+        "escala": "Proyecto (B2)",
+        "unidad": "% del presupuesto de ejecución",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-010",
+        "nombre": "Residuos de construcción y demolición gestionados",
+        "escala": "Proyecto (B2)",
+        "unidad": "% en peso",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBA-011",
+        "nombre": "Uso de compost",
+        "escala": "Proyecto",
+        "unidad": "m3 y % ",
+        "origen_calculo": "",
+        "categoria": "CBA"
+      },
+      {
+        "codigo": "CBS-001",
+        "nombre": "Dotación de áreas verdes",
+        "escala": "Municipal",
+        "unidad": "m2 / habitante",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-002",
+        "nombre": "Proximidad de áreas verdes",
+        "escala": "Municipal",
+        "unidad": "%",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-003",
+        "nombre": "Proximidad simultánea a espacios verdes",
+        "escala": "Municipal",
+        "unidad": "%",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-004",
+        "nombre": "Percepción del espacio",
+        "escala": "Proyecto (B1 y B2)",
+        "unidad": "Encuesta",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-005",
+        "nombre": "Percepción de bienestar",
+        "escala": "Proyecto (B1)",
+        "unidad": "Encuesta",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-006",
+        "nombre": "Actividad física inducida",
+        "escala": "Proyecto",
+        "unidad": "Número de usuarios",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-007",
+        "nombre": "Movilidad activa inducida",
+        "escala": "Proyecto",
+        "unidad": "Número de usuarios / año",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-008",
+        "nombre": "Actividad económica municipal inducida",
+        "escala": "Proyecto",
+        "unidad": "€/año",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-009",
+        "nombre": "Incremento de actividades de proximidad",
+        "escala": "Proyecto",
+        "unidad": "Número",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-010",
+        "nombre": "Empleos directos",
+        "escala": "Proyecto (B2)",
+        "unidad": "Número y Esfuerzo",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-011",
+        "nombre": "Empleos indirectos",
+        "escala": "Proyecto (B2)",
+        "unidad": "Número y Esfuerzo",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-012",
+        "nombre": "Empleos temporales",
+        "escala": "Proyecto (B2)",
+        "unidad": "Número y Esfuerzo",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-013",
+        "nombre": "Empleos permanentes",
+        "escala": "Proyecto (B2)",
+        "unidad": "Número y Esfuerzo",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-014",
+        "nombre": "Accesibilidad universal",
+        "escala": "Proyecto",
+        "unidad": "%",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-015",
+        "nombre": "Superficie ocupada por huertos urbanos",
+        "escala": "Proyecto",
+        "unidad": "m2",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-016",
+        "nombre": "Dotación de huertos urbanos por habitante",
+        "escala": "Municipal",
+        "unidad": "m2 por habitante",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "CBS-017",
+        "nombre": "Seguridad ciudadana en áreas verdes",
+        "escala": "Municipal",
+        "unidad": "Número",
+        "origen_calculo": "",
+        "categoria": "CBS"
+      },
+      {
+        "codigo": "GEN-001",
+        "nombre": "Presencia de mujeres en el equipo ",
+        "escala": "Proyecto (B2)",
+        "unidad": "Nº y %",
+        "origen_calculo": "",
+        "categoria": "GEN"
+      },
+      {
+        "codigo": "GEN-002",
+        "nombre": "Compromiso con la igualdad de género de entidades colaboradoras",
+        "escala": "Proyecto",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "GEN"
+      },
+      {
+        "codigo": "GEN-003",
+        "nombre": "Presencia de mujeres en procesos de participación del proyecto",
+        "escala": "Proyecto",
+        "unidad": "%",
+        "origen_calculo": "",
+        "categoria": "GEN"
+      },
+      {
+        "codigo": "GEN-004",
+        "nombre": "Presencia de especialistas en género",
+        "escala": "Proyecto",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "GEN"
+      },
+      {
+        "codigo": "GEN-005",
+        "nombre": "Análisis de género en el sector",
+        "escala": "Proyecto",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "GEN"
+      },
+      {
+        "codigo": "GEN-006",
+        "nombre": "Comunicación y sensibilización sobre igualdad de género ",
+        "escala": "Proyecto",
+        "unidad": "Nº ",
+        "origen_calculo": "",
+        "categoria": "GEN"
+      },
+      {
+        "codigo": "Gobernanza y participación",
+        "nombre": "",
+        "escala": "",
+        "unidad": "",
+        "origen_calculo": "",
+        "categoria": "SIN_CATEGORIA"
+      },
+      {
+        "codigo": "C-101",
+        "nombre": "Coordinación multinivel con organismos competentes en el proyecto",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-102",
+        "nombre": "Participación-colaboración de agentes clave en proyecto ",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-103",
+        "nombre": "Participación ciudadana activa al amparo del proyecto",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-104",
+        "nombre": "Recogida de percepción y opinión ciudadana",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-105",
+        "nombre": "Órganos permanentes creados a partir de las entidades implicadas en el proyecto",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-106",
+        "nombre": "Sistemas regulatorios creados",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-107",
+        "nombre": "Mecanismos incentivadores creados",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-108",
+        "nombre": "Transparencia en el proceso",
+        "escala": "",
+        "unidad": "Si/No",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-109",
+        "nombre": "Alianzas y colaboraciones internacionales",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-110",
+        "nombre": "Fondos públicos y privados movilizados para la renaturalización ",
+        "escala": "",
+        "unidad": "€",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "Comunicación y Sensibilización",
+        "nombre": "",
+        "escala": "",
+        "unidad": "",
+        "origen_calculo": "",
+        "categoria": "SIN_CATEGORIA"
+      },
+      {
+        "codigo": "C-201",
+        "nombre": "Difusión general del proyecto en medios",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-202",
+        "nombre": "Difusión general del proyecto en redes sociales",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-203",
+        "nombre": "Difusión general del proyecto en la web municipal",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-204",
+        "nombre": "Divulgación de los contenidos del proyecto",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-205",
+        "nombre": "Divulgación y sensibilización general presencial",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-206",
+        "nombre": "Difusión especializada del proyecto en medios",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-207",
+        "nombre": "Formación y capacitación en el ámbito de la renaturalización",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-208",
+        "nombre": "Contribución de las plataformas de ciencia ciudadana al conocimiento de la biodiversidad",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-209",
+        "nombre": "Percepción ciudadana ante la naturalización",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-210",
+        "nombre": "Transferencia de conocimiento",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C -211",
+        "nombre": "Participación en actividades programadas durante la ejecución del proyecto",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C "
+      },
+      {
+        "codigo": "Medición y seguimiento",
+        "nombre": "",
+        "escala": "",
+        "unidad": "",
+        "origen_calculo": "",
+        "categoria": "SIN_CATEGORIA"
+      },
+      {
+        "codigo": "C-301",
+        "nombre": "Seguimiento de informes",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-302",
+        "nombre": "Evaluación de impacto",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      },
+      {
+        "codigo": "C-303",
+        "nombre": "Gestión adaptativa",
+        "escala": "",
+        "unidad": "Nº",
+        "origen_calculo": "",
+        "categoria": "C"
+      }
+    ]
+  },
+  "indicadores_estrategicos": {
+    "total": 12,
+    "indicadores": [
+      {
+        "codigo": "A-001 ",
+        "nombre": "Documento estratégico",
+        "unidad": "Si/No",
+        "origen_calculo": "Existencia o no del documento de estrategia de Renaturalización de la ciudad de Pinto"
+      },
+      {
+        "codigo": "A-002",
+        "nombre": " Diagnóstico",
+        "unidad": "Si/No",
+        "origen_calculo": "Existencia o no del documento de Diagnóstico de Biodiversidad e Infraestrcutura Verde de Pinto"
+      },
+      {
+        "codigo": "A-003",
+        "nombre": "Inventario de arbolado urbano",
+        "unidad": "Si/No",
+        "origen_calculo": "Existe un inventario de arbolado urbano desactualizado"
+      },
+      {
+        "codigo": "A-004",
+        "nombre": " Cartografía",
+        "unidad": "Si/No",
+        "origen_calculo": "Existencia o no de la cartografía de infraestructuras verdes y corredores ecológicos"
+      },
+      {
+        "codigo": "A-005",
+        "nombre": " Cuantificación de servicios ecosistémicos",
+        "unidad": "Si/No",
+        "origen_calculo": "-"
+      },
+      {
+        "codigo": "A-006",
+        "nombre": " Definición de líneas y acciones para el fortalecimiento y gestión de la IVU",
+        "unidad": "Si/No",
+        "origen_calculo": "Existencia o no del Plan de Biodiversidad e Infraestructuras Verdes de Pinto elaborado por SEOBridLife"
+      },
+      {
+        "codigo": "A-007",
+        "nombre": "Seguimiento y reporte",
+        "unidad": "Si/No",
+        "origen_calculo": "-"
+      },
+      {
+        "codigo": "A-008",
+        "nombre": "Acompañamiento presupuestario",
+        "unidad": "Si/No",
+        "origen_calculo": "-"
+      },
+      {
+        "codigo": "A-009",
+        "nombre": " Compatibilidad con planeamiento urbano",
+        "unidad": "Si/No",
+        "origen_calculo": "-"
+      },
+      {
+        "codigo": "A-010",
+        "nombre": " Seguimiento de biodiversidad",
+        "unidad": "Nº anual de informes",
+        "origen_calculo": "Existe un inventario de aves realizado en 2022 y el seguimiento (SACRE) en 2023"
+      },
+      {
+        "codigo": "A-011",
+        "nombre": "Acuerdos de custodia del territorio inventariados en el municipio",
+        "unidad": "Nº anual y acumulado de acuerdos vigentes",
+        "origen_calculo": "-"
+      },
+      {
+        "codigo": "A-012",
+        "nombre": "Mantenimiento ecológico",
+        "unidad": "Nº anual de criterios",
+        "origen_calculo": "-"
+      }
+    ]
+  },
+  "indicadores_seguimiento": {},
+  "categorias_explicadas": {
+    "SUP": "Superficie - Indicadores relacionados con superficies naturalizadas, áreas verdes y espacios renaturalizados",
+    "BDU": "Biodiversidad Urbana - Indicadores sobre diversidad biológica, especies, flora y fauna urbana",
+    "CON": "Conectividad - Indicadores sobre conectividad ecológica, corredores y fragmentación",
+    "RES": "Resiliencia - Indicadores sobre adaptación climática, gestión de agua y riesgos ambientales",
+    "CBA": "Calidad Biofísica Ambiental - Indicadores sobre calidad del aire, ruido, temperatura y impactos ambientales",
+    "CBS": "Cobeneficios Sociales - Indicadores sobre bienestar social, salud, empleo y beneficios comunitarios",
+    "GEN": "Género - Indicadores sobre igualdad de género e inclusión",
+    "C": "Comunicación y Gobernanza - Indicadores sobre participación, comunicación y gestión del proyecto",
+    "A": "Estratégicos - Indicadores sobre documentos estratégicos y planificación",
+    "SEG": "Seguimiento - Indicadores específicos de seguimiento del proyecto"
+  },
+  "escalas_definidas": {
+    "Proyecto": "Nivel de intervención específica del proyecto",
+    "Municipal": "Nivel de todo el municipio",
+    "Submunicipal": "Nivel de distritos o barrios dentro del municipio",
+    "B1": "Tipo de proyecto B1 (específico de la convocatoria)",
+    "B2": "Tipo de proyecto B2 (específico de la convocatoria)",
+    "B3": "Tipo de proyecto B3 (específico de la convocatoria)",
+    "B4": "Tipo de proyecto B4 (específico de la convocatoria)"
+  },
+  "unidades_definidas": {
+    "m2": "Metros cuadrados - superficie",
+    "%": "Porcentaje",
+    "Nº": "Número - cantidad",
+    "Si/No": "Binario - existencia o no",
+    "µg/m3": "Microgramos por metro cúbico - concentración",
+    "dBA": "Decibelios A - nivel sonoro",
+    "Ton CO2/año": "Toneladas de CO2 por año - emisiones",
+    "m3": "Metros cúbicos - volumen",
+    "€": "Euros - valor económico",
+    "ml": "Metros lineales - longitud",
+    "Encuesta": "Datos cualitativos de percepción",
+    "Número de usuarios": "Cantidad de personas beneficiarias"
+  },
+  "proyectos_definidos": {
+    "B1": "Proyectos de renaturalización en espacios públicos",
+    "B2": "Proyectos de infraestructura verde urbana",
+    "B3": "Proyectos de espacios verdes privados",
+    "B4": "Proyectos de restauración de ecosistemas periurbanos"
+  },
+  "seguimiento": {
+    "campos_temporales": [
+      "Valor línea base",
+      "Valor intermedio",
+      "Valor final"
+    ],
+    "objetivos": [
+      "Objetivo 2025",
+      "Objetivo estrategia"
+    ],
+    "observaciones": "Campo para precisiones y matizaciones",
+    "fechas_reporte": "Mínimo 3 mediciones durante el proyecto"
+  }
+}

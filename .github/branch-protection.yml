@@ -1,0 +1,75 @@
+# Branch Protection Rules Configuration
+# This file documents the recommended branch protection settings
+# Apply these settings manually in GitHub repository settings
+
+main:
+  protection:
+    required_status_checks:
+      strict: true
+      contexts:
+        - "Test Suite"
+        - "Security Scanning"
+        - "Build Application"
+        - "Validate Pull Request"
+    
+    enforce_admins: true
+    
+    required_pull_request_reviews:
+      required_approving_review_count: 2
+      dismiss_stale_reviews: true
+      require_code_owner_reviews: true
+      require_last_push_approval: true
+    
+    restrictions:
+      users: []
+      teams: ["core-team", "security-team"]
+      apps: []
+    
+    required_linear_history: true
+    allow_force_pushes: false
+    allow_deletions: false
+    block_creations: false
+    required_conversation_resolution: true
+
+develop:
+  protection:
+    required_status_checks:
+      strict: true
+      contexts:
+        - "Test Suite"
+        - "Security Scanning"
+        - "Build Application"
+        - "Validate Pull Request"
+    
+    enforce_admins: false
+    
+    required_pull_request_reviews:
+      required_approving_review_count: 1
+      dismiss_stale_reviews: true
+      require_code_owner_reviews: false
+      require_last_push_approval: false
+    
+    restrictions:
+      users: []
+      teams: ["developers"]
+      apps: []
+    
+    required_linear_history: false
+    allow_force_pushes: false
+    allow_deletions: false
+    block_creations: false
+    required_conversation_resolution: true
+
+# To apply these settings programmatically:
+# 1. Install GitHub CLI: https://cli.github.com/
+# 2. Run the following commands:
+
+# For main branch:
+# gh api repos/:owner/:repo/branches/main/protection \
+#   --method PUT \
+#   --input .github/branch-protection-main.json
+
+# For develop branch:
+# gh api repos/:owner/:repo/branches/develop/protection \
+#   --method PUT \
+#   --input .github/branch-protection-develop.json
