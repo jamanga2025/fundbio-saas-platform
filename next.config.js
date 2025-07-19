@@ -123,8 +123,8 @@ const config = {
     return config;
   },
 
-  // Output configuration
-  output: 'standalone',
+  // Output configuration for Railway
+  // output: 'standalone', // Disabled for Railway compatibility
   
   // Environment variables
   env: {
