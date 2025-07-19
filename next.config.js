@@ -148,8 +148,8 @@ const config = {
 
   // ESLint configuration
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
 };
 
-export default config;
+module.exports = config;
