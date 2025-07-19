@@ -13,13 +13,8 @@ export default function HomePage() {
   useEffect(() => {
     if (session) {
       router.push("/dashboard");
-    } else if (status === "unauthenticated") {
-      // Redirect to login after 2 seconds if not authenticated
-      const timer = setTimeout(() => {
-        router.push("/auth/signin");
-      }, 2000);
-      return () => clearTimeout(timer);
     }
+    // Removed automatic redirect to signin to prevent infinite loop
   }, [session, router, status]);
 
   if (status === "loading") {
