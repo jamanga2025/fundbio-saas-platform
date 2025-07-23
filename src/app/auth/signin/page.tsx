@@ -43,8 +43,8 @@ export default function SignIn() {
       if (error) {
         setError(error.message);
       } else if (data.user) {
-        // Back to real dashboard with improved auth handling
-        router.push("/dashboard");
+        // Use main-dashboard to avoid Railway /dashboard loop
+        router.push("/main-dashboard");
       }
     } catch (error) {
       setError("An error occurred during sign in");
