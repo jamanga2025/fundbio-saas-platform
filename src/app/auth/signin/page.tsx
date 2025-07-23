@@ -43,8 +43,8 @@ export default function SignIn() {
       if (error) {
         setError(error.message);
       } else if (data.user) {
-        // Use app-dashboard to access the real FundBio dashboard
-        router.push("/app-dashboard");
+        // Back to /dashboard - Next.js will redirect to /app-dashboard automatically
+        router.push("/dashboard");
       }
     } catch (error) {
       setError("An error occurred during sign in");

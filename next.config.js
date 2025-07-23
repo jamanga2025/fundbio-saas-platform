@@ -71,8 +71,8 @@ const config = {
     return [
       {
         source: '/dashboard',
-        destination: '/dashboard/',
-        permanent: true,
+        destination: '/app-dashboard',
+        permanent: false,
       }
     ];
   },
