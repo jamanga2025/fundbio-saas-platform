@@ -28,7 +28,7 @@ export function middleware(request: NextRequest) {
     "style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com",
     "img-src 'self' data: blob: https: http:",
-    "connect-src 'self' https://api.github.com",
+    "connect-src 'self' https://api.github.com https://zzwfyhgisoxkgmblmbvm.supabase.co",
     "worker-src 'self' blob:",
     "frame-src 'none'",
     "object-src 'none'",
