@@ -43,8 +43,8 @@ export default function SignIn() {
       if (error) {
         setError(error.message);
       } else if (data.user) {
-        // Use main-dashboard to avoid Railway /dashboard loop
-        router.push("/main-dashboard");
+        // Use app-dashboard to access the real FundBio dashboard
+        router.push("/app-dashboard");
       }
     } catch (error) {
       setError("An error occurred during sign in");

@@ -9,63 +9,24 @@ export default function Dashboard() {
   const router = useRouter();
 
   useEffect(() => {
-    console.log('Dashboard - Status:', status, 'Session:', !!session);
-    
-    // TEMPORARILY DISABLED - No redirects to debug the loop
-    // More lenient session check - only redirect if we're sure there's no session
     if (status === "loading") return; // Still loading
     
-    // COMMENTED OUT TO PREVENT LOOP - DEBUGGING ONLY
-    /*
     // Only redirect if we've finished loading AND definitely have no session
     if (status === "unauthenticated" && !session) {
-      console.log('No session found after loading, redirecting to signin');
       router.push("/auth/signin");
-    } else if (session) {
-      console.log('Session found:', session.user?.email);
     }
-    */
-    
-    console.log('REDIRECT DISABLED FOR DEBUGGING - Status:', status, 'HasSession:', !!session);
   }, [session, status, router]);
 
   if (status === "loading") {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-xl">🔄 Cargando sesión...</div>
+        <div className="text-xl">Cargando...</div>
       </div>
     );
   }
 
-  // SHOW DEBUG INFO INSTEAD OF HIDING
-  const debugInfo = {
-    status,
-    hasSession: !!session,
-    sessionId: session?.access_token ? 'present' : 'missing',
-    userEmail: session?.user?.email || 'no-email',
-    userId: session?.user?.id || 'no-id'
-  };
-
   if (!session) {
-    return (
-      <div className="min-h-screen bg-red-50 flex items-center justify-center">
-        <div className="bg-white p-8 rounded-lg shadow-lg max-w-md">
-          <h1 className="text-xl font-bold text-red-600 mb-4">❌ No Session Found</h1>
-          <div className="space-y-2 text-sm">
-            <div><strong>Status:</strong> {status}</div>
-            <div><strong>Has Session:</strong> {String(!!session)}</div>
-            <div className="mt-4">
-              <button 
-                onClick={() => router.push('/auth/signin')}
-                className="bg-blue-600 text-white px-4 py-2 rounded"
-              >
-                Go to Login
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+    return null;
   }
 
   const handleSignOut = async () => {
@@ -82,22 +43,15 @@ export default function Dashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <div>
-                <h1 className="text-xl font-semibold text-gray-900">
-                  🐞 DEBUG Dashboard - Sesión Activa
-                </h1>
-                <div className="mt-1 p-2 bg-green-50 border border-green-200 rounded text-xs">
-                  <span><strong>Status:</strong> {debugInfo.status} | </span>
-                  <span><strong>Email:</strong> {debugInfo.userEmail} | </span>
-                  <span><strong>Token:</strong> {debugInfo.sessionId}</span>
-                </div>
-              </div>
+              <h1 className="text-xl font-semibold text-gray-900">
+                Fundación Biodiversidad - Dashboard
+              </h1>
             </div>
             <div className="flex items-center space-x-4">
               <div className="text-sm text-gray-700">
                 <span className="font-medium">{session.user.email}</span>
-                <span className="ml-2 px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full">
-                  ✅ Autenticado
+                <span className="ml-2 px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-full">
+                  {session.user.role === "FUNDACION" ? "Fundación" : "Ayuntamiento"}
                 </span>
               </div>
               <button
