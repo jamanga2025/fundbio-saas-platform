@@ -43,8 +43,8 @@ export default function SignIn() {
       if (error) {
         setError(error.message);
       } else if (data.user) {
-        // Temporary redirect to test dashboard to avoid loop
-        router.push("/dashboard-test");
+        // Back to real dashboard with improved auth handling
+        router.push("/dashboard");
       }
     } catch (error) {
       setError("An error occurred during sign in");

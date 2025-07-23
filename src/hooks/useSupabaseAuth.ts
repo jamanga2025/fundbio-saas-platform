@@ -66,6 +66,20 @@ export function useSupabaseAuth() {
     }
   } : null;
 
+  // More robust status determination
+  const authStatus = loading 
+    ? 'loading' 
+    : compatibleSession 
+      ? 'authenticated' 
+      : 'unauthenticated';
+
+  console.log('useSupabaseAuth state:', { 
+    loading, 
+    hasSession: !!compatibleSession, 
+    status: authStatus, 
+    userEmail: compatibleSession?.user?.email 
+  });
+
   return {
     user,
     session: compatibleSession,
@@ -73,7 +87,7 @@ export function useSupabaseAuth() {
     signOut,
     supabase,
     // Compatibility with NextAuth
-    status: loading ? 'loading' : session ? 'authenticated' : 'unauthenticated',
+    status: authStatus,
     data: compatibleSession
   };
 }

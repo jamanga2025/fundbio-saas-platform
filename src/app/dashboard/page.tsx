@@ -10,11 +10,15 @@ export default function Dashboard() {
 
   useEffect(() => {
     console.log('Dashboard - Status:', status, 'Session:', !!session);
+    
+    // More lenient session check - only redirect if we're sure there's no session
     if (status === "loading") return; // Still loading
-    if (!session) {
-      console.log('No session found, redirecting to signin');
-      router.push("/auth/signin"); // Not logged in
-    } else {
+    
+    // Only redirect if we've finished loading AND definitely have no session
+    if (status === "unauthenticated" && !session) {
+      console.log('No session found after loading, redirecting to signin');
+      router.push("/auth/signin");
+    } else if (session) {
       console.log('Session found:', session.user?.email);
     }
   }, [session, status, router]);
