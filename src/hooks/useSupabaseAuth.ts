@@ -17,9 +17,23 @@ export function useSupabaseAuth() {
   useEffect(() => {
     // Get initial session
     const getInitialSession = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      setSession(session);
-      setUser(session?.user ?? null);
+      try {
+        const { data: { session }, error } = await supabase.auth.getSession();
+        console.log('Initial session check:', { session: !!session, error, email: session?.user?.email });
+        
+        if (error) {
+          console.error('Session error:', error);
+          setSession(null);
+          setUser(null);
+        } else {
+          setSession(session);
+          setUser(session?.user ?? null);
+        }
+      } catch (err) {
+        console.error('Failed to get session:', err);
+        setSession(null);
+        setUser(null);
+      }
       setLoading(false);
     };
 
@@ -29,6 +43,7 @@ export function useSupabaseAuth() {
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(async (event, session) => {
+      console.log('Auth state change:', event, { session: !!session, email: session?.user?.email });
       setSession(session);
       setUser(session?.user ?? null);
       setLoading(false);
