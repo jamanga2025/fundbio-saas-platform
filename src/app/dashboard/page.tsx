@@ -45,9 +45,9 @@ export default function Dashboard() {
             </div>
             <div className="flex items-center space-x-4">
               <div className="text-sm text-gray-700">
-                <span className="font-medium">{session.user.name}</span>
-                <span className="ml-2 px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-full">
-                  {session.user.role === "FUNDACION" ? "Fundación" : "Ayuntamiento"}
+                <span className="font-medium">{session.user.email}</span>
+                <span className="ml-2 px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full">
+                  Usuario
                 </span>
               </div>
               <button

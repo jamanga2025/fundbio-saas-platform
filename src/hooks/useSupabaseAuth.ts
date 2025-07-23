@@ -41,14 +41,24 @@ export function useSupabaseAuth() {
     await supabase.auth.signOut();
   };
 
+  // Create a compatible session object for NextAuth compatibility
+  const compatibleSession = session ? {
+    ...session,
+    user: {
+      ...session.user,
+      name: session.user.email,
+      role: 'FUNDACION' // Default role for now, can be customized later
+    }
+  } : null;
+
   return {
     user,
-    session,
+    session: compatibleSession,
     loading,
     signOut,
     supabase,
     // Compatibility with NextAuth
     status: loading ? 'loading' : session ? 'authenticated' : 'unauthenticated',
-    data: session
+    data: compatibleSession
   };
 }
