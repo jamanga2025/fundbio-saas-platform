@@ -21,7 +21,9 @@ export default function SignIn() {
     const checkUser = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
-        router.push('/dashboard');
+        console.log('Session found, but not auto-redirecting to prevent loop');
+        // Temporarily disabled to debug loop
+        // router.push('/dashboard');
       }
     };
     checkUser();

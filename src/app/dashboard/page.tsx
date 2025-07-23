@@ -9,8 +9,14 @@ export default function Dashboard() {
   const router = useRouter();
 
   useEffect(() => {
+    console.log('Dashboard - Status:', status, 'Session:', !!session);
     if (status === "loading") return; // Still loading
-    if (!session) router.push("/auth/signin"); // Not logged in
+    if (!session) {
+      console.log('No session found, redirecting to signin');
+      router.push("/auth/signin"); // Not logged in
+    } else {
+      console.log('Session found:', session.user?.email);
+    }
   }, [session, status, router]);
 
   if (status === "loading") {
