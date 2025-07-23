@@ -119,7 +119,7 @@ export default function MainDashboard() {
                 <div className="space-y-2 text-sm">
                   <div><strong>Usuario:</strong> {session.user.email}</div>
                   <div><strong>ID:</strong> {session.user.id}</div>
-                  <div><strong>Última actualización:</strong> {new Date(session.user.updated_at).toLocaleString()}</div>
+                  <div><strong>Última actualización:</strong> {session.user.updated_at ? new Date(session.user.updated_at).toLocaleString() : 'N/A'}</div>
                   <div><strong>Estado:</strong> <span className="text-green-600 font-semibold">Activo</span></div>
                 </div>
               </div>
