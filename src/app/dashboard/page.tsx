@@ -1,11 +1,11 @@
 "use client";
 
-import { useSession, signOut } from "next-auth/react";
+import { useSupabaseAuth } from "@/hooks/useSupabaseAuth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function Dashboard() {
-  const { data: session, status } = useSession();
+  const { session, status, signOut } = useSupabaseAuth();
   const router = useRouter();
 
   useEffect(() => {
@@ -26,7 +26,8 @@ export default function Dashboard() {
   }
 
   const handleSignOut = async () => {
-    await signOut({ redirect: true, callbackUrl: "/" });
+    await signOut();
+    router.push("/");
   };
 
   return (
